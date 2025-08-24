@@ -1,0 +1,53 @@
+/* General body styling */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f4f4f9;
+  color: #333;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Heading style */
+h1 {
+  color: #4a4a4a;
+  margin-bottom: 16px;
+}
+
+/* Paragraph style */
+p#message {
+  font-size: 1.1em;
+  color: #666;
+  min-height: 48px; /* Prevents layout shift when text changes */
+  line-height: 1.5;
+  transition: color 0.3s ease-in-out; /* Smooth color transition */
+}
+
+/* Button styling */
+button#changeTextBtn {
+  padding: 12px 24px;
+  font-size: 1em;
+  font-weight: bold;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, transform 0.1s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Button hover and active effects for better user feedback */
+button#changeTextBtn:hover {
+  background-color: #0056b3;
+}
+
+button#changeTextBtn:active {
+  transform: scale(0.98);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
