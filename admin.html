@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Must See Videos | Ataraxia</title>
+    <title>Admin Page | Ataraxia</title>
     <link rel="icon" type="image/png" href="https://i.imgur.com/zv4Mhlx.png">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -28,7 +28,7 @@
     <nav>
         <a href="index.html">Home</a>
         <div class="dropdown">
-            <a href="#" class="dropbtn active">Videos</a>
+            <a href="#" class="dropbtn">Videos</a>
             <div class="dropdown-content">
                 <a href="science.html">Science</a>
                 <a href="politics.html">Politics</a>
@@ -39,25 +39,25 @@
     </nav>
 
     <main>
-        <h1>Must See Videos</h1>
-        <div class="link-list">
-            <div class="link-item">
-                <h3>Crash Course: Philosophy</h3>
-                <p>An entire playlist dedicated to exploring the history of philosophy. <a href="https://www.youtube.com/playlist?list=PL8dPuuaLjXtNgK6MZucdYldNkMybYIHKR" target="_blank" rel="noopener noreferrer">View Playlist &rarr;</a></p>
-            </div>
-        </div>
+        <h1>Admin Access Page</h1>
+        <p>Welcome, Admin. This is a restricted area.</p>
 
-        <div class="video-section" style="margin-top: 2.5rem;">
-            <div class="video-container"><iframe src="https://www.youtube.com/embed/ovJcsL7vyrk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
-        </div>
-        <div class="video-section">
-            <div class="video-container"><iframe src="https://www.youtube.com/embed/fXW-QjBsruE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
-        </div>
-        <div class="video-section">
-            <div class="video-container"><iframe src="https://www.youtube.com/embed/AFusVfj7yBI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+        <div class="puzzle-section">
+            <p class="word-haystack">
+                entropy solace paradigm nebula quasar vector singularity axiom parallax vortex cosmos static theory dimension gravity fusion nova orbit celestial horizon wavelength spectrum quantum equilibrium particle field constant matrix variable resonance frequency amplitude decay isotope ion flux sisyphus
+            </p>
         </div>
     </main>
 
+    <div class="admin-section">
+        <h2>Random Video Playlist</h2>
+        <p>Paste one YouTube link per line. The player on the homepage will randomly select one of the top 7 videos to display.</p>
+        <textarea id="video-list-input" class="admin-textarea" rows="10" placeholder="e.g., https://www.youtube.com/watch?v=..."></textarea>
+        <button id="save-video-list" class="admin-button">Save List</button>
+        <p id="save-confirmation" class="save-confirm"></p>
+    </div>
+
     <script src="main.js" defer></script>
+    <script src="admin.js" defer></script>
 </body>
 </html>

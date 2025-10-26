@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
 /* Starfield background layers */
 @keyframes move-stars {
   from { background-position: 0 0; }
@@ -138,6 +140,11 @@ main {
   max-width: 800px;
 }
 
+/* Specific style for the homepage's main content to make it narrower */
+.main-homepage {
+    max-width: 650px;
+}
+
 /* Heading style */
 h1 {
   color: #f0f6fc;
@@ -188,6 +195,24 @@ p {
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
   width: 100%;
+}
+
+/* Fixed image on the politics page */
+.fixed-left-image {
+  position: fixed;
+  top: 6rem; /* Position below the nav bar */
+  left: 1rem;
+  width: 250px; /* A reasonable small size */
+  z-index: 998; /* Below other fixed widgets but above main content */
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+}
+
+.fixed-left-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
 }
 
 /* On smaller screens, stack the politics videos */
@@ -339,10 +364,9 @@ p {
 
 /* SoundCloud Embed */
 .soundcloud-embed {
-  margin-top: 1.5rem;
   border: none;
   border-radius: 8px;
-  max-width: 500px; /* Keeps it from looking too wide on large screens */
+  width: 100%;
 }
 
 .soundcloud-attribution {
@@ -355,7 +379,6 @@ p {
   text-overflow: ellipsis;
   font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Garuda, Verdana, Tahoma, sans-serif;
   font-weight: 100;
-  max-width: 500px;
   width: 100%;
   margin-top: 5px;
   text-align: left;
@@ -364,4 +387,372 @@ p {
 .soundcloud-attribution a {
   color: #8b949e;
   text-decoration: none;
+}
+
+/* Puzzle Section on Admin Page */
+.puzzle-section {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #30363d;
+}
+
+.word-haystack {
+  line-height: 1.8;
+  color: #8b949e;
+  text-align: justify;
+  font-family: monospace;
+}
+
+/* Admin Page Section */
+.admin-section {
+  width: 100%;
+  max-width: 800px;
+  margin-top: 2rem;
+  padding: 2rem;
+  border-top: 1px solid #30363d;
+  text-align: left;
+}
+
+.admin-textarea {
+  width: 100%;
+  background-color: #010409;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  padding: 0.75rem;
+  color: #e6edf3;
+  font-size: 1em;
+  font-family: monospace;
+  line-height: 1.5;
+  margin-top: 1rem;
+  box-sizing: border-box;
+}
+
+.admin-button {
+  background-color: #58a6ff;
+  color: #0d1117;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  font-size: 0.9em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-top: 1rem;
+}
+
+.admin-button:hover {
+  background-color: #9ecbff;
+}
+
+.save-confirm {
+  color: #4caf50; /* Green for success */
+  font-weight: bold;
+  margin-top: 1rem;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.save-confirm.fade-out {
+  opacity: 1;
+}
+
+/* Sign-in Form Styling */
+.signin-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 400px;
+  width: 100%;
+  margin: 2rem auto 0;
+  padding: 2rem;
+  background-color: rgba(22, 27, 34, 0.7);
+  backdrop-filter: blur(5px);
+  border: 1px solid #30363d;
+  border-radius: 8px;
+}
+
+.signin-form .form-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.signin-form label {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #c9d1d9;
+}
+
+.signin-form input {
+  background-color: #010409;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  padding: 0.75rem;
+  color: #e6edf3;
+  font-size: 1em;
+}
+
+.signin-form input:focus {
+  outline: none;
+  border-color: #58a6ff;
+  box-shadow: 0 0 0 3px rgba(88, 166, 255, 0.3);
+}
+
+.signin-form button {
+  background-color: #58a6ff;
+  color: #0d1117;
+  border: none;
+  border-radius: 6px;
+  padding: 0.75rem;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.signin-form button:hover {
+  background-color: #9ecbff;
+}
+
+.signin-error {
+  color: #f85149; /* Red for errors */
+  text-align: center;
+  margin-top: 1rem;
+  min-height: 1.2em; /* Prevents layout shift */
+  display: none; /* Hidden by default */
+}
+
+/* --- Settings Dropdown --- */
+.settings-container {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1000; /* Make sure it's on top of everything */
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.settings-dropdown {
+  position: relative;
+  padding-bottom: 8px; /* Creates a hoverable bridge to the dropdown menu */
+  margin-bottom: -8px; /* Prevents the padding from pushing down other nav items */
+}
+.signin-btn {
+  background-color: rgba(22, 27, 34, 0.7);
+  backdrop-filter: blur(5px);
+  border: 1px solid #30363d;
+  color: #c9d1d9;
+  height: 40px;
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  padding: 0 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+
+.signin-btn:hover {
+  color: #58a6ff;
+  border-color: #58a6ff;
+}
+
+.settings-btn {
+  background-color: rgba(22, 27, 34, 0.7);
+  backdrop-filter: blur(5px);
+  border: 1px solid #30363d;
+  color: #c9d1d9;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.settings-btn:hover {
+  color: #58a6ff;
+  border-color: #58a6ff;
+}
+
+.settings-btn svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.settings-dropdown-content {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+  position: absolute;
+  right: 0;
+  top: calc(100% + 8px);
+  background-color: rgba(22, 27, 34, 0.9);
+  backdrop-filter: blur(5px);
+  min-width: 180px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.4);
+  z-index: 1;
+  border-radius: 8px;
+  border: 1px solid #30363d;
+  padding: 0.5rem 0;
+}
+
+.settings-dropdown-content a {
+  color: #c9d1d9;
+  padding: 10px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  font-size: 0.9em;
+}
+
+.settings-dropdown-content a:hover {
+  background-color: rgba(56, 139, 253, 0.2);
+  color: #f0f6fc;
+}
+
+.settings-dropdown:hover .settings-dropdown-content,
+.settings-dropdown.is-active .settings-dropdown-content {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+/* --- THEME STYLES --- */
+
+/* Psychedelic Theme */
+@keyframes psychedelic-bg {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+body[data-theme="psychedelic"] {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: psychedelic-bg 15s ease infinite;
+    color: #fff;
+}
+body[data-theme="psychedelic"] h1, body[data-theme="psychedelic"] h2, body[data-theme="psychedelic"] h3 {
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+body[data-theme="psychedelic"] nav, body[data-theme="psychedelic"] .game-card, body[data-theme="psychedelic"] .link-item, body[data-theme="psychedelic"] .constitution-text, body[data-theme="psychedelic"] .settings-btn, body[data-theme="psychedelic"] .settings-dropdown-content {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+body[data-theme="psychedelic"] nav a, body[data-theme="psychedelic"] .link-item a, body[data-theme="psychedelic"] .dropbtn {
+    color: #fff;
+}
+
+/* Obsidian Black Theme */
+body[data-theme="black"] {
+    background: #000;
+    color: #e0e0e0;
+}
+body[data-theme="black"] h1, body[data-theme="black"] h2, body[data-theme="black"] h3 {
+    color: #fff;
+}
+body[data-theme="black"] nav, body[data-theme="black"] .game-card, body[data-theme="black"] .link-item, body[data-theme="black"] .constitution-text, body[data-theme="black"] .settings-btn, body[data-theme="black"] .settings-dropdown-content {
+    background-color: #111;
+    border-color: #333;
+}
+body[data-theme="black"] nav a, body[data-theme="black"] .link-item a, body[data-theme="black"] .dropbtn {
+    color: #bbb;
+}
+body[data-theme="black"] nav a:hover, body[data-theme="black"] nav a.active, body[data-theme="black"] .dropdown:hover .dropbtn {
+    color: #fff;
+}
+
+/* Graffiti Theme */
+body[data-theme="graffiti"] {
+    background-color: #4a4a4a;
+    background-image: url('https://www.transparenttextures.com/patterns/brick-wall.png');
+    color: #fff;
+}
+body[data-theme="graffiti"] h1, body[data-theme="graffiti"] h2, body[data-theme="graffiti"] .link-item h3 {
+    font-family: 'Permanent Marker', cursive;
+    color: #fef200; /* Bright yellow */
+    text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000;
+}
+body[data-theme="graffiti"] nav, body[data-theme="graffiti"] .game-card, body[data-theme="graffiti"] .link-item, body[data-theme="graffiti"] .constitution-text, body[data-theme="graffiti"] .settings-btn, body[data-theme="graffiti"] .settings-dropdown-content {
+    background-color: rgba(10, 10, 10, 0.7);
+    border: 2px solid #fff;
+    border-radius: 0;
+}
+
+/* Mental Health Awareness Theme */
+body[data-theme="mental-health"] {
+    background-color: #f0f4f0; /* Very light green/grey */
+    color: #37474f; /* Dark grey-blue */
+}
+body[data-theme="mental-health"] h1, body[data-theme="mental-health"] h2, body[data-theme="mental-health"] h3 {
+    color: #2e7d32; /* Darker green */
+}
+body[data-theme="mental-health"] nav, body[data-theme="mental-health"] .game-card, body[data-theme="mental-health"] .link-item, body[data-theme="mental-health"] .constitution-text, body[data-theme="mental-health"] .settings-btn, body[data-theme="mental-health"] .settings-dropdown-content {
+    background-color: #fff;
+    border-color: #c8e6c9;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+body[data-theme="mental-health"] nav a, body[data-theme="mental-health"] .link-item a, body[data-theme="mental-health"] .dropbtn {
+    color: #1b5e20; /* Even darker green */
+}
+body[data-theme="mental-health"] nav a:hover, body[data-theme="mental-health"] nav a.active, body[data-theme="mental-health"] .dropdown:hover .dropbtn {
+    color: #4caf50; /* Medium green */
+}
+
+/* Random Video Player on Homepage */
+.random-video-player {
+  width: 320px; /* Increased size for better controls */
+  height: 180px; /* 16:9 aspect ratio */
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+  background-color: #010409;
+}
+
+/* New container for fixed widgets in the top-left */
+#top-left-widgets {
+  position: fixed;
+  top: 6rem; /* Lowered to not cover the nav bar */
+  left: 1rem;
+  z-index: 999; /* Below settings menu */
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+/* Adjust player dimensions for vertical YouTube Shorts */
+.random-video-player.is-short {
+  width: 180px; /* Increased size for better controls */
+  height: 320px;
+}
+
+.random-video-player iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.soundcloud-container {
+  width: 320px; /* Match the width of the video player */
+  box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+}
+
+/* Sisyphus Game Canvas */
+#gameCanvas {
+    margin-top: 1rem;
+    background-color: #0d1117;
+    border: 1px solid #30363d;
+    border-radius: 8px;
 }

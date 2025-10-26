@@ -9,6 +9,30 @@
 </head>
 <body>
 
+    <div id="top-left-widgets">
+        <div id="random-video-container" class="random-video-player"></div>
+        <div class="soundcloud-container">
+            <iframe class="soundcloud-embed" width="100%" height="180" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2131985826&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+            <div class="soundcloud-attribution"><a href="https://soundcloud.com/onycsmusic" title="Onycs" target="_blank">Onycs</a> · <a href="https://soundcloud.com/onycsmusic/eclipse" title="Onycs - Eclipse" target="_blank">Onycs - Eclipse</a></div>
+        </div>
+    </div>
+
+    <div class="settings-container">
+        <a href="signin.html" class="signin-btn">Sign In</a>
+        <div class="settings-dropdown">
+            <button class="settings-btn" aria-label="Settings">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.14,12.94c0.04-0.3,0.06-0.61,0.06-0.94c0-0.32-0.02-0.64-0.07-0.94l2.03-1.58c0.18-0.14,0.23-0.41,0.12-0.61 l-1.92-3.32c-0.12-0.22-0.37-0.29-0.59-0.22l-2.39,0.96c-0.5-0.38-1.03-0.7-1.62-0.94L14.4,2.81c-0.04-0.24-0.24-0.41-0.48-0.41 h-3.84c-0.24,0-0.44,0.17-0.48,0.41L9.2,5.7c-0.59,0.24-1.13,0.56-1.62,0.94l-2.39-0.96c-0.22-0.08-0.47,0-0.59,0.22 l-1.92,3.32c-0.11,0.2-0.06,0.47,0.12,0.61l2.03,1.58C4.02,11.36,4,11.68,4,12s0.02,0.64,0.07,0.94l-2.03,1.58 c-0.18,0.14-0.23,0.41-0.12,0.61l1.92,3.32c0.12,0.22,0.37,0.29,0.59,0.22l2.39-0.96c0.5,0.38,1.03,0.7,1.62,0.94l0.36,2.54 c0.04,0.24,0.24,0.41,0.48,0.41h3.84c0.24,0,0.44-0.17,0.48-0.41l0.36-2.54c0.59-0.24,1.13-0.56,1.62-0.94l2.39,0.96 c0.22,0.08,0.47,0,0.59-0.22l1.92-3.32c0.11-0.2,0.06-0.47-0.12-0.61L19.14,12.94z M12,15.6c-1.98,0-3.6-1.62-3.6-3.6 s1.62-3.6,3.6-3.6s3.6,1.62,3.6,3.6S13.98,15.6,12,15.6z"/></svg>
+            </button>
+            <div class="settings-dropdown-content">
+                <a href="#" data-theme="space">Space (Default)</a>
+                <a href="#" data-theme="psychedelic">Psychedelic</a>
+                <a href="#" data-theme="black">Obsidian Black</a>
+                <a href="#" data-theme="graffiti">Graffiti</a>
+                <a href="#" data-theme="mental-health">Green Awareness</a>
+            </div>
+        </div>
+    </div>
+
     <nav>
         <a href="index.html" class="active">Home</a>
         <div class="dropdown">
@@ -19,17 +43,19 @@
                 <a href="must-see.html">Must See</a>
             </div>
         </div>
-        <a href="games.html">Games</a>
+        <div class="dropdown">
+            <a href="#" class="dropbtn">Games</a>
+            <div class="dropdown-content">
+                <a href="games.html">Game Links</a>
+                <a href="sisyphus.html">Sisyphus</a>
+            </div>
+        </div>
     </nav>
 
-    <main>
+    <main class="main-homepage">
         <h1>Welcome to Ataraxia</h1>
         <p>This is the main page. Use the navigation above to see recent videos on important topics or play free browser games.</p>
-        <div class="earth-container">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7f/Rotating_earth_animated_transparent.gif" alt="A rotating pixel art globe." class="rotating-earth-gif">
-            <iframe class="soundcloud-embed" width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2131985826&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-            <div class="soundcloud-attribution"><a href="https://soundcloud.com/onycsmusic" title="Onycs" target="_blank">Onycs</a> · <a href="https://soundcloud.com/onycsmusic/eclipse" title="Onycs - Eclipse" target="_blank">Onycs - Eclipse</a></div>
-        </div>
+        <div class="earth-container"><img src="https://upload.wikimedia.org/wikipedia/commons/7/7f/Rotating_earth_animated_transparent.gif" alt="A rotating pixel art globe." class="rotating-earth-gif"></div>
     </main>
 
     <script src="main.js" defer></script>
